@@ -1,15 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News Portal</title>
-  <link rel="stylesheet" href="./main.css">
-</head>
-<body>
-  
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <script type="module" src="./js/script.js"></script>
-</body>
+    <title>News Portal</title>
+    <link rel="stylesheet" href="./main.css" />
+
+    <style>
+      .font-roboto {
+        font-family: "Roboto", sans-serif;
+      }
+      .font-playfair {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- nav bar  -->
+      <section class="container mx-auto my-3">
+        <div class="navbar bg-base-100 border-b">
+          <div class="flex-1 mb-6">
+            <a
+              class="btn btn-ghost text-base font-bold font-playfair bg-[#5D5FEF] text-white"
+              >News</a
+            >
+            <a
+              class="btn btn-ghost font-playfair text-base font-bold text-[#5D5FEF]"
+              >Portal</a
+            >
+          </div>
+          <div class="flex gap-6 space-x-6 mb-6">
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <div class="flex gap-4 space-x-4">
+                  <h3 class="text-base font-roboto text-[#5D5FEF]">
+                    N<span class="border-b-4 border-[#5D5FEF]">ew</span>s
+                  </h3>
+                  <h3 class="font-roboto text-base font-normal text-[#A3A3A3]">
+                    Blog
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown dropdown-end">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost btn-circle avatar"
+              >
+                <div class="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                </div>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52"
+              >
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge">New</span>
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- categories button -->
+      <section class="container mx-auto">
+        <div class="flex xs:flex-wrap md:flex-nowrap items-center justify-center md:gap-8 md:space-x-6">
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#858585]"
+            >Home</a
+          >
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#858585]"
+            >Breaking news</a
+          >
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#858585]"
+            >Regular news</a
+          >
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#858585]"
+            >International news
+          </a>
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#858585]"
+            >Sports</a
+          >
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#5D5FEF] bg-[#EEEFFF] hover:bg-[#9fa5f0]"
+            >Entertainment</a
+          >
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#858585]"
+            >Culture</a
+          >
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#858585]"
+            >Arts</a
+          >
+          <a
+            class="btn btn-ghost text-base font-normal font-roboto text-[#858585]"
+            >All news</a
+          >
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- search input -->
+      <div class="container mx-auto my-4">
+        <div
+          class="flex flex-col gap-3 md:flex-row items-center justify-center"
+        >
+          <input
+            class="w-11/12 outline outline-1 rounded-lg p-3"
+            type="text"
+            placeholder="Type here category name..."
+          />
+          <button
+            class="btn btn-ghost text-base font-bold font-playfair bg-[#5D5FEF] text-white"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+
+      <!-- news card section -->
+      <section class="container mx-auto my-10">
+        <div>
+          <div class="card lg:card-side bg-base-100 shadow-2xl border border-white">
+            <figure>
+              <img
+                src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
+                alt="Album"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">New album is released!</h2>
+              <p>Click the button to listen on Spotiwhy app.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Listen</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script type="module" src="./js/script.js"></script>
+  </body>
 </html>
